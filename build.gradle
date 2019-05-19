@@ -19,7 +19,12 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven{
+            url 'https://dl.bintray.com/tapsellorg/maven'
+        }
+        flatDir {
+            dirs 'libs'
+        }
     }
 }
 
