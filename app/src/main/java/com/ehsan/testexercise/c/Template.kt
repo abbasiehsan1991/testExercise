@@ -1,9 +1,10 @@
-package com.ehsan.testexercise.subtest
+package com.ehsan.testexercise.c
 
 /**
  *
  *Created by Ehsan Abbasi for TestExercise at 5/19/19
  *
  */
-class Template constructor(){
+class Template() {
+
 }

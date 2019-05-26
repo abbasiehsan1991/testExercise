@@ -1,5 +1,6 @@
 package com.ehsan.testexercise
 
+import com.ehsan.testexercise.a.Car
 import org.junit.Assert.*
 import org.junit.Test
 import org.mockito.Mockito

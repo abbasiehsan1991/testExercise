@@ -1,13 +1,13 @@
-package com.ehsan.testexercise.subtest
+package com.ehsan.testexercise.c
 
 /**
  *
  *Created by Ehsan Joon for TestExercise at 4/30/19
  *
  */
-public interface Client {
+interface Client {
 
-    fun receive(message:Messenger)
+    fun receive(message: Messenger)
 
     fun getEmail ():String{
         return ""

@@ -1,5 +1,6 @@
 package com.ehsan.testexercise
 
+import com.ehsan.testexercise.b.FootballTeam
 import junit.framework.Assert.assertEquals
 import junit.framework.Assert.assertTrue
 import junitparams.JUnitParamsRunner
