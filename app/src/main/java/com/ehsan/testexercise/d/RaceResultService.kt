@@ -7,14 +7,19 @@ package com.ehsan.testexercise.d
  */
 class RaceResultService {
 
-    private lateinit var client : Client
+    private val clients = ArrayList<Client>()
 
     fun addSubscriber(mClient: Client) {
-        this.client = mClient
+        clients.add(mClient)
     }
 
     fun send(mMessage: Message) {
-        client.receive(mMessage)
-    }
 
+        for ( client in clients){
+
+            client.receive(mMessage)
+
+        }
+
+    }
 }
