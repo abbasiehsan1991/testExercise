@@ -29,7 +29,7 @@ class RaceResultServiceTest {
 
     @Test
     fun notSubscribedClientShouldNotReceiveAnyMessage() {
-yet
+
         raceResultService.send(message)
 
         /**
@@ -56,7 +56,7 @@ yet
     }
 
     @Test
-    fun () {
+    fun allSubscribedClientsShouldReceiveMessage() {
 
         raceResultService.addSubscriber(clientA)
         raceResultService.addSubscriber(clientB)
