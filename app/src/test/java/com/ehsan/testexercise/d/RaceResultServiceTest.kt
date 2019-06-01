@@ -1,10 +1,11 @@
-package com.ehsan.testexercise
+package com.ehsan.testexercise.d
 
-import com.ehsan.testexercise.d.Client
-import com.ehsan.testexercise.d.Message
-import com.ehsan.testexercise.d.RaceResultService
 import org.junit.Test
+import org.mockito.Mock
 import org.mockito.Mockito
+import org.mockito.Mockito.times
+import kotlin.concurrent.timer
+import kotlin.text.Typography.times
 
 /**
  * Created by Ehsan Joon for TestExercise at 4/29/19
@@ -66,5 +67,30 @@ class RaceResultServiceTest {
         Mockito.verify(clientA).receive(message)
         Mockito.verify(clientB).receive(message)
     }
+
+
+    @Test
+    fun shouldSendOnlyOneMessageToMultiSubscriber() {
+
+        raceResultService.addSubscriber(clientA)
+        raceResultService.addSubscriber(clientA)
+
+        raceResultService.send(message)
+
+        Mockito.verify(clientA, Mockito.times(1)).receive(message)
+    }
+
+    @Test
+    fun unsubscribedClientShouldNotReceiveAnyMessage() {
+
+        raceResultService.addSubscriber(clientA)
+
+        raceResultService.removeSubscriber(clientA)
+
+        raceResultService.send(message)
+
+        Mockito.verify(clientA, Mockito.never()).receive(message)
+    }
+
 
 }

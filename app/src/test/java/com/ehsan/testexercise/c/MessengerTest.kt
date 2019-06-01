@@ -1,6 +1,5 @@
-package com.ehsan.testexercise
+package com.ehsan.testexercise.c
 
-import com.ehsan.testexercise.c.*
 import org.junit.Test
 import org.mockito.Mockito
 

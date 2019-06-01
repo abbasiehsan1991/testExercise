@@ -7,9 +7,11 @@ package com.ehsan.testexercise.c
  */
 interface Client {
 
-    fun receive(message: Messenger)
+    fun receive(message: Messenger){
+        //Do anything that you want :)
+    }
 
     fun getEmail ():String{
-        return ""
+        return "sample@Email.com"
     }
 }

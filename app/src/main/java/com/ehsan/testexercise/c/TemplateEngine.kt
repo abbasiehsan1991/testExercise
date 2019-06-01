@@ -8,6 +8,6 @@ package com.ehsan.testexercise.c
 class TemplateEngine{
 
     fun prepareMessage(template: Template, client: Client) :String{
-        return ""
+        return "This is a sample message that prepared fot Email [${client.getEmail()}]"
     }
 }

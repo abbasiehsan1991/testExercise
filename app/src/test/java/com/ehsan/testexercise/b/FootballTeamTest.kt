@@ -1,4 +1,4 @@
-package com.ehsan.testexercise
+package com.ehsan.testexercise.b
 
 import com.ehsan.testexercise.b.FootballTeam
 import junit.framework.Assert.assertEquals

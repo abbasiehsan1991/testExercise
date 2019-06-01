@@ -7,7 +7,7 @@ package com.ehsan.testexercise.d
  */
 class RaceResultService {
 
-    private val clients = ArrayList<Client>()
+    private val clients = HashSet<Client>()
 
     fun addSubscriber(mClient: Client) {
         clients.add(mClient)
@@ -15,11 +15,15 @@ class RaceResultService {
 
     fun send(mMessage: Message) {
 
-        for ( client in clients){
+        for (client in clients) {
 
             client.receive(mMessage)
 
         }
 
+    }
+
+    fun removeSubscriber(client: Client) {
+        clients.remove(client)
     }
 }

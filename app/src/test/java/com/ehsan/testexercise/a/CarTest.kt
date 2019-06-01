@@ -1,6 +1,5 @@
-package com.ehsan.testexercise
+package com.ehsan.testexercise.a
 
-import com.ehsan.testexercise.a.Car
 import org.junit.Assert.*
 import org.junit.Test
 import org.mockito.Mockito
@@ -81,7 +80,7 @@ class CarTest {
     }
 
     @Test
-    fun failedVerificationDiffrentArgumentsTest(){
+    fun failedVerificationDifferentArgumentsTest(){
 
         myFerrari.driveTo("pls go to the city")
 
